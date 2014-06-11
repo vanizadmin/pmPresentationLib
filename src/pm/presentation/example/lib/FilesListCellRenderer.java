@@ -44,7 +44,13 @@ public class FilesListCellRenderer extends DefaultListCellRenderer {
                 }
             }
         } else {
-            text = entity.getFileName().toString();
+            try {
+                if (entity.getFileName() != null) {
+                    text = entity.getFileName().toString();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         if (entity != null) {
             label.setIcon(fileSystemView.getSystemIcon(entity.toFile()));
