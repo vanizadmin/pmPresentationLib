@@ -11,8 +11,11 @@ import java.awt.event.FocusEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.GroupLayout;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
@@ -38,8 +41,9 @@ public class FilesMainPanel extends javax.swing.JPanel {
         rootNode.loadChildren();
         initComponents();
         MouseListener popupListener = new PopupListener(fsPopupMenu); // νέες γραμμ ές
+        fsTree.addMouseListener(popupListener);
           fsList.addMouseListener(popupListener);
-   
+          
         
     }
 

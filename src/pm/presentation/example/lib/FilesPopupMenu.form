@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.2" maxVersion="1.9">
-  <NonVisualComponents>
-    <Container class="pm.presentation.example.lib.ShowPropertiesMI" name="showPropertiesMI1">
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="showProperties = new pm.presentation.example.lib.ShowPropertiesMI(filesMainPanel);"/>
-      </AuxValues>
-
-      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
-        <Property name="useNullLayout" type="boolean" value="true"/>
-      </Layout>
-    </Container>
-  </NonVisualComponents>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -28,4 +17,11 @@
   <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
     <Property name="useNullLayout" type="boolean" value="true"/>
   </Layout>
+  <SubComponents>
+    <Menu class="pm.presentation.example.lib.ShowPropertiesMI" name="showPropertiesMI1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="showProperties = new pm.presentation.example.lib.ShowPropertiesMI(filesMainPanel);"/>
+      </AuxValues>
+    </Menu>
+  </SubComponents>
 </Form>

@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.2" maxVersion="1.9">
+  <NonVisualComponents>
+    <Container class="pm.presentation.example.lib.FilesPopupMenu" name="filesPopupMenu1">
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+        <Property name="useNullLayout" type="boolean" value="true"/>
+      </Layout>
+    </Container>
+  </NonVisualComponents>
   <Events>
     <EventHandler event="treeWillExpand" listener="javax.swing.event.TreeWillExpandListener" parameters="javax.swing.event.TreeExpansionEvent" handler="formTreeWillExpand"/>
   </Events>

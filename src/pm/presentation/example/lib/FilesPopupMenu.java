@@ -37,6 +37,8 @@ public class FilesPopupMenu extends JPopupMenu {
     private void initComponents() {
 
         showPropertiesMI1 = showProperties = new pm.presentation.example.lib.ShowPropertiesMI(filesMainPanel);
+
+        add(showPropertiesMI1);
     }// </editor-fold>//GEN-END:initComponents
 
 

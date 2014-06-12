@@ -6,15 +6,19 @@
 
 package pm.presentation.example.lib;
 
+import java.util.List;
 import java.io.IOException;
 import java.nio.file.DirectoryIteratorException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JList;
-
+import pm.entitymanager.logic.*;
+import pm.entitymanager.logic.file.*;
 /**
  *
  * @author user
@@ -27,15 +31,30 @@ public class FilesList extends JList {
     public FilesList() {
         initComponents();
     }
-    public FilesList(Path dir) {
+    public FilesList(Path dir)  {
         loadDirContents(dir);
         setModel(listModel);
         initComponents();
     }
     public final void loadDirContents(Path dir) //final ⇔ not overridable
     {
+       // EntityInterface facade = new FileLogicFacade();
+        FileLogicFacade s = null;
+        try {
+            s = new FileLogicFacade();
+        } catch (IOException ex) {
+            Logger.getLogger(FilesList.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        EntityInterface rootfs;
+        rootfs = s.getRootEntity();
+        String name;
+        name = s.getEntityName(rootfs);
+        System.out.println(name);
+        List<AbstractFile> files;
+        files = (List<AbstractFile>) s.getAllChildren(rootfs);
+
         listModel.removeAllElements();
-        if (dir == null) // root
+                if (dir == null) // root
         {
 // add file-systems to list
             Iterable<Path> fileSystems
@@ -56,6 +75,8 @@ public class FilesList extends JList {
                 System.err.println(x);
             }
         }
+      //  listModel.addElement(files);
+
     }
 
     /**

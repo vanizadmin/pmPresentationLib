@@ -42,6 +42,8 @@ public class FilesTree extends JTree {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        filesPopupMenu1 = new pm.presentation.example.lib.FilesPopupMenu();
+
         addTreeWillExpandListener(new javax.swing.event.TreeWillExpandListener() {
             public void treeWillCollapse(javax.swing.event.TreeExpansionEvent evt)throws javax.swing.tree.ExpandVetoException {
             }
@@ -60,5 +62,6 @@ public class FilesTree extends JTree {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private pm.presentation.example.lib.FilesPopupMenu filesPopupMenu1;
     // End of variables declaration//GEN-END:variables
 }
